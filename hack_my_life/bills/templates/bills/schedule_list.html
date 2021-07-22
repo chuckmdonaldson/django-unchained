@@ -1,0 +1,12 @@
+{% extends "bills/bills_base.html" %}
+
+{% block body_block %}
+
+<h1>Welcome to a list of schedules!</h1>
+  {% for schedule in schedules %}
+    <li>
+      {{ schedule.name }}
+    </li>
+  {% endfor %}
+
+{% endblock %}

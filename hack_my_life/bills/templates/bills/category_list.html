@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+
+{% extends "bills/bills_base.html" %}
+
+{% block body_block %}
+      <h1>Welcome to a list of all catgories!</h1>
+      <ol>
+        {% for category in categories %}
+          <h2><li>{{ category.name }}</li></h2>
+        {% endfor %}
+      </ol>
+{% endblock %}

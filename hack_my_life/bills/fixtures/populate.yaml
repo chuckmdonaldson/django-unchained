@@ -1,0 +1,116 @@
+- model: bills.Category
+  pk: 1
+  fields:
+    name: "Cloud Storage"
+- model: bills.Category
+  pk: 2
+  fields:
+    name: "Insurance"
+- model: bills.Category
+  pk: 3
+  fields:
+    name: "Rent"
+- model: bills.Category
+  pk: 4
+  fields:
+    name: "Internet"
+- model: bills.Category
+  pk: 5
+  fields:
+    name: "Printer Ink"
+- model: bills.Category
+  pk: 6
+  fields:
+    name: "Mobile Service"
+- model: bills.Category
+  pk: 7
+  fields:
+    name: "TV Streaming"
+- model: bills.Category
+  pk: 8
+  fields:
+    name: "Music Streaming"
+- model: bills.Category
+  pk: 9
+  fields:
+    name: "Medication"
+- model: bills.Category
+  pk: 10
+  fields:
+    name: "Electric"
+- model: bills.Category
+  pk: 11
+  fields:
+    name: "Home Assistant Cloud"
+
+- model: bills.PaymentProvider
+  pk: 1
+  fields:
+    name: BBVA
+- model: bills.PaymentProvider
+  pk: 2
+  fields:
+    name: CashApp
+- model: bills.PaymentProvider
+  pk: 3
+  fields:
+    name: PayPal
+- model: bills.PaymentProvider
+  pk: 4
+  fields:
+    name: Venmo
+
+- model: bills.Schedule
+  pk: 1
+  fields:
+    name: Monthly
+- model: bills.Schedule
+  pk: 2
+  fields:
+    name: Yearly
+- model: bills.Schedule
+  pk: 3
+  fields:
+    name: Random
+
+- model: bills.PaymentMethod
+  pk: 1
+  fields:
+    name: 1
+    card_number: 4504683421455730
+    exp_date: 2025-07-01
+    cvv: 897
+- model: bills.PaymentMethod
+  pk: 2
+  fields:
+    name: 2
+    card_number: 44039312119672112
+    exp_date: 2026-10-01
+    cvv: 997
+- model: bills.PaymentMethod
+  pk: 3
+  fields:
+    name: 3
+    card_number: 5143773776552845
+    exp_date: 2022-04-01
+    cvv: 069
+- model: bills.PaymentMethod
+  pk: 4
+  fields:
+    name: 4
+    card_number: 5143772828885310
+    exp_date: 2010-11-01
+    cvv: 217
+
+- model: bills.Creditor
+  pk: 1
+  fields:
+    name: Green Mountain Energy
+    url: https://myaccount.greenmountain.com/login
+    account_number: 73493463-1
+    username: chuckmdonaldson
+    password: 8Er6sn4!
+    category: 10
+    autopay: True
+    schedule: 1
+    payment_method: 1

@@ -1,0 +1,12 @@
+{% extends "bills/bills_base.html" %}
+
+{% block body_block %}
+
+<h1>List of all payment_providers</h1>
+  <ol>
+    {% for provider in providers %}
+      <h2><li>{{ provider.name }}</li></h2>
+    {% endfor %}
+  </ol>
+
+{% endblock %}

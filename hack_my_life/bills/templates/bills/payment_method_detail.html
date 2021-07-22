@@ -1,0 +1,14 @@
+{% extends "bills/bills_base.html" %}
+
+{% block body_block %}
+  <h1>Welcome to the Payment Methods Details Page!</h1>
+  <h2>Payment Method Details:</h2>
+  <p>Name: {{ payment_method_detail.name }}</p>
+  <p>Card Number: {{ payment_method_detail.card_number }}</p>
+  <p>Expiration Date: {{ payment_method_detail.exp_date }}</p>
+  <p>CVV: {{ payment_method_detail.cvv }}</p>
+  <h3>Payment Providers:</h3>
+    {% for provider in payment_method_detail.providers.all %}
+      <p>{{ provider.name }}</p>
+    {% endfor %}
+{% endblock %}

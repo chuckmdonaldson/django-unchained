@@ -1,0 +1,12 @@
+{% extends "bills/bills_base.html" %}
+
+{% block body_block %}
+
+<h1>List of all payment_methods</h1>
+  <ol>
+    {% for method in methods %}
+      <h2><li><a href="{% url 'bills:payment_method_detail' method.pk %}">{{ method.name }}</a></li></h2>
+    {% endfor %}
+  </ol>
+
+{% endblock %}

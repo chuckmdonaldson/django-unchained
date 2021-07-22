@@ -1,0 +1,64 @@
+{% extends "bills/bills_base.html" %}
+
+{% block body_block %}
+<div class=container>
+  <h1>
+    Welcome to the Creditor Details Page!
+  </h1>
+  <h2>
+    Creditor Details:
+  </h2>
+  <p>
+    Name: {{ creditor_detail.name }}
+  </p>
+  <p>
+    URL: {{ creditor_detail.url }}
+  </p>
+  <p>
+    Account Number: {{ creditor_detail.account_number }}
+  </p>
+  <p>
+    Username: {{ creditor_detail.username }}
+  </p>
+  <p>
+    Password: {{ creditor_detail.password }}
+  </p>
+  <p>
+    Category: {{ creditor_detail.category }}
+  </p>
+  <p>
+    Autopay: {{ creditor_detail.autopay }}
+  </p>
+  <p>
+    schedule: {{ creditor_detail.schedule }}
+  </p>
+  <p>
+    payment_method: {{ creditor_detail.payment_method }
+  </p>
+  <h3>
+    Categories:
+  </h3>
+    {% for category in creditor_detail.categories.all %}
+      <p>
+        {{ category.name }}
+      </p>
+    {% endfor %}
+  <h3>Schedules:</h3>
+    {% for schedule in creditor_detail.schedules.all %}
+      <p>
+        {{ schedule.name }}
+      </p>
+    {% endfor %}
+  <h3>Payment Methods:</h3>
+    {% for method in creditor_detail.methods.all %}
+      <p>
+        {{ method.name }}
+      </p>
+    {% endfor %}
+</div>
+<div class="container">
+  <p>
+    <a class='btn btn-warning' href="{% url 'bills:creditor_update' pk=creditor_detail.pk %}">Update</a>
+  </p>
+</div>
+{% endblock %}
